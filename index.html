@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas Button</title>
+    <meta http-equiv="refresh" content="2;url=main.html"> <!-- Chuyển hướng sau 2 giây -->
+    <title>Redirecting...</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,76 +32,12 @@
         button:hover {
             background-color: #cc3333;
         }
-
-        /* Tuyết rơi */
-        #snowflakes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-        }
-
-        .snowflake {
-            position: absolute;
-            top: -10px;
-            background-color: white;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: fall linear infinite;
-        }
-
-        /* Hiệu ứng tuyết rơi */
-        @keyframes fall {
-            0% {
-                top: -10px;
-                left: calc(100% * random());
-            }
-            100% {
-                top: 100%;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <button onclick="startChristmas()">Bấm vào đây nè!</button>
-
-    <div id="snowflakes"></div> <!-- Đối tượng cho tuyết rơi -->
-    <audio id="christmasMusic" loop>
-        <source src="music.mp3" type="audio/mpeg">
-        Trình duyệt của bạn không hỗ trợ phát nhạc.
-    </audio>
-
-    <script>
-        function startChristmas() {
-            // Bắt đầu phát nhạc
-            const audio = document.getElementById('christmasMusic');
-            audio.play().catch(error => {
-                console.log("Tự động phát bị chặn, yêu cầu tương tác từ người dùng.");
-            });
-
-            // Bắt đầu tạo hiệu ứng tuyết rơi
-            createSnowflakes();
-
-            // Chuyển hướng ngay lập tức đến trang "main.html"
-            window.location.href = 'main.html'; // Chuyển hướng đến main.html
-        }
-
-        // Hàm tạo tuyết rơi
-        function createSnowflakes() {
-            const snowflakes = document.getElementById('snowflakes');
-            for (let i = 0; i < 200; i++) { // Tạo 200 hạt tuyết
-                const snowflake = document.createElement('div');
-                snowflake.classList.add('snowflake');
-                snowflakes.appendChild(snowflake);
-            }
-        }
-    </script>
+    <p>Trang sẽ tự động chuyển hướng đến <a href="main.html">main.html</a> trong 2 giây...</p>
+    <button onclick="window.location.href='main.html'">Chuyển ngay</button>
 </body>
 
 </html>
