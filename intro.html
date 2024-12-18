@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #ff6666;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #cc3333;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="startChristmas()">Bấm vào đây nè!</button>
+
+    <script>
+        function startChristmas() {
+            window.location.href = 'index.html'; // Chuyển hướng đến index.html
+        }
+    </script>
+</body>
+
+</html>
